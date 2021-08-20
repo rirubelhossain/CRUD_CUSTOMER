@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerCrd ;
+use App\Http\Controllers\PaginationController ;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,8 @@ Route :: get('/view/{id}', [CustomerCrd::class,'data_view'])->name('view.data');
 Route :: get('/delete-post/{id}', [CustomerCrd::class,'delete_post'])->name('deleted.data');
 Route :: get('/edit-post/{id}', [CustomerCrd::class,'edit_post'])->name('edit.post');
 Route :: post('/update-post', [CustomerCrd::class,'update_post'])->name('update.post');
+
+
+///pagination
+
+Route ::get('/user', [PaginationController::class, 'allusers']);
