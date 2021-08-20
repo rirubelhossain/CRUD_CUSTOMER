@@ -21,7 +21,6 @@ class DatabaseSeeder extends Seeder
                 'email' =>$faker->email ,
                 'password' =>bcrypt('secret') 
             ]);
-
         }
         // \App\Models\User::factory(10)->create();
     }
